@@ -8,6 +8,14 @@ import { JbvErrorClassDirective } from './jbv-error-class.directive';
 import { JbvErrorMessageDirective } from './jbv-error-message.directive';
 import { JbvShowOnErrorDirective } from './jbv-show-on-error.directive';
 
+let instance: JbvService = null;
+
+export function jbvServiceFactory(): JbvService {
+  if (instance == null)
+    instance = new JbvService();
+  return instance;
+} 
+
 @NgModule({
   imports: [
     CommonModule
@@ -19,7 +27,7 @@ import { JbvShowOnErrorDirective } from './jbv-show-on-error.directive';
     JbvShowOnErrorDirective
   ],
   providers: [
-    {provide: JbvService, useExisting: JbvService},
+    {provide: JbvService, useFactory: jbvServiceFactory},
     {provide: ErrorHandler, useClass: JBVErrorHandler}
   ],
   exports:[
