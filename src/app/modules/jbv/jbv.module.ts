@@ -19,7 +19,7 @@ import { JbvShowOnErrorDirective } from './jbv-show-on-error.directive';
     JbvShowOnErrorDirective
   ],
   providers: [
-    {provide: JbvService, useValue: new JbvService()},
+    {provide: JbvService, useExisting: JbvService},
     {provide: ErrorHandler, useClass: JBVErrorHandler}
   ],
   exports:[
