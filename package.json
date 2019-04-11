@@ -1,6 +1,6 @@
 {
   "name": "ng-jbv",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Angular directives to add validations elements on the form components when backend is implemented with spring boot and java beans validation.",
   "homepage": "https://github.com/ronisilveira/ng-jbv",
   "author": {
