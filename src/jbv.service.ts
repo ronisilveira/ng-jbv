@@ -11,6 +11,8 @@ export class JbvService {
 
   addErrors(errors: any[]) {
 
+      console.log(errors);
+
       this.errors.clear();
       errors.forEach(err => this.errors.set(err.field, err.defaultMessage));
       this.errorEmitter.emit(this.errors);

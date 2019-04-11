@@ -8,6 +8,8 @@ export class JBVErrorHandler implements ErrorHandler {
 
     handleError(error: any): void {
 
+        console.log(error);
+        
         if (error.status == 400)
             this.jbvService.addErrors(error.errors);
         else
