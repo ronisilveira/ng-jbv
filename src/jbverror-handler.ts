@@ -9,7 +9,7 @@ export class JBVErrorHandler implements ErrorHandler {
     handleError(error: any): void {
 
         if (error.status == 400)
-            this.jbvService.addErrors(error.json());
+            this.jbvService.addErrors(error.errors);
         else
             console.error(error);
     }
