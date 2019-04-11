@@ -1,1 +1,1 @@
-export * from './src/app/modules/jbv/jbv.module'
+export * from './src/jbv.module'
